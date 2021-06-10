@@ -8,6 +8,10 @@ Write a function box_capacity() that figures out how many crates you can store i
 For example: a warehouse 32 feet long, 64 feet wide, and 16 feet high can hold 13,824 boxes because you can fit 24 boxes across, 48 boxes deep, and 12 boxes high, so box_capacity(32, 64, 16) should return 13824.
 */
 
-function boxCapacity(length, width, height) {
-  return ; //code here
+const boxCapacity = (length, width, height) => {
+  const high = Math.floor((height * 12) / 16);
+  const wide = Math.floor((width * 12) / 16);
+  const long = Math.floor((length * 12) / 16);
+
+  return high * wide * long; 
 }
